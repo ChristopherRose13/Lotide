@@ -29,7 +29,7 @@ const eqObjects = function(object1, object2) {
   }
 
   for (let object1Key of obj1Keys) {
-    console.log(Array.isArray(object1Key));
+
     if (Array.isArray(object1[object1Key])) {
       if (eqArrays(object1[object1Key], object2[object1Key ]) === false) {
         return false;
@@ -47,8 +47,12 @@ const eqObjects = function(object1, object2) {
 
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
-  console.log(`Example label: ${inspect(actual)}`);
-  assertEqual(eqObjects(actual, expected), true);
+
+  if (eqObjects(actual, expected)) {
+    console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
+  }
 };
 
 assertObjectsEqual({a: "b"}, {a: "b"});
