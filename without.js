@@ -13,3 +13,5 @@ const without = function (list, toBeRemoved) {
 const words = ["hello", "world", "lighthouse"];
 console.log(without(words, ["lighthouse"]));
 console.log(without([1,2,3], [1,4,6]));
+
+module.exports = without;

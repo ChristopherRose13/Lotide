@@ -19,7 +19,8 @@ const countLetters = function(sentence) {
   return counts;
 };
 
-const sentence = "banana";
-const answer = {b: 1, a: 3, n: 2};
+// const sentence = "banana";
+// const answer = {b: 1, a: 3, n: 2};
 
-assertEqual(countLetters(sentence, answer));
+// assertEqual(countLetters(sentence, answer));
+module.exports = countLetters;

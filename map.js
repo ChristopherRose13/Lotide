@@ -39,3 +39,5 @@ assertEqual(eqArrays(results1, [ 'g', 'c', 't', 'm', 't' ]), true);
 
 assertEqual(eqArrays(results2, ['c', 'I', 'A', 's', 'a']), true);
 assertEqual(eqArrays(results3, []), true);
+
+module.exports = map;
